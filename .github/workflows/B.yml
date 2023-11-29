@@ -42,5 +42,9 @@ jobs:
 
       - name: "Unzip artifact"
         run: unzip context.zip
-      - name: "Display unziped file content"
-        run: cat context.zip
+
+      - name: upload again
+        uses: actions/upload-artifact@v3
+        with:
+          name: again-artifact
+          path: ./
