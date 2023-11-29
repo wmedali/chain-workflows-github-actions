@@ -10,3 +10,17 @@ jobs:
     steps:
       - name: Some Step
         run: echo "Bonjour le monde !"
+
+  job_producing_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Some Step
+        run: |
+          printf '{ 
+            "prop_1": "Some value",  
+            "prop_2": true
+          }' >> context.json
+      - uses: actions/upload-artifact@v3
+        with:
+          name: context.json
+          path: ./
