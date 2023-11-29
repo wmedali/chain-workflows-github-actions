@@ -21,7 +21,7 @@ jobs:
             "prop_2": true
           }' >> context.json
       - name: provoquer l'erreur
-        script: ls ./folder
+        run: ls ./folder
       - uses: actions/upload-artifact@v3
         if: ${{ always() }}
         with:
