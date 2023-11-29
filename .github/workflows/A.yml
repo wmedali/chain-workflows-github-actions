@@ -20,8 +20,6 @@ jobs:
             "prop_1": "Some value",  
             "prop_2": true
           }' >> context.json
-      - name: provoquer l'erreur
-        run: ls ./folder
       - uses: actions/upload-artifact@v3
         if: ${{ always() }}
         with:

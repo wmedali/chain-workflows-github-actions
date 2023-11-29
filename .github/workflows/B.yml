@@ -8,6 +8,7 @@ on:
 
 jobs:
   run_on_workflow_a_success:
+    #    if: ${{ github.event.workflow_run.conclusion == 'success' }} To run only on after workflow success
     runs-on: ubuntu-latest
     steps:
       - name: Run on workflow A success
