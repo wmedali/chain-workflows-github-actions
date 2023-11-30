@@ -14,4 +14,4 @@ jobs:
       - name: Some Step
         run: echo "Bonjour le monde !"
       - name: reuse steps
-        uses: ./.github/actions/D.yml
+        uses: ./.github/actions/action.yml
