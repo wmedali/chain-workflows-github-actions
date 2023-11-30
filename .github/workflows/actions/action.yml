@@ -4,4 +4,7 @@ description: "Greet everyone"
 runs:
   using: "composite"
   steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - run: echo Hello everybody !
